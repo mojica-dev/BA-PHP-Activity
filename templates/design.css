@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.custom-navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 80px;
+
+    z-index: 99999 !important;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+.custom-navbar .navbar-brand {
+    color: #C1121F;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.custom-navbar .navbar-brand:hover {
+    color: white;
+    opacity: 0.8;
+}
+
+
+.custom-navbar .navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+}
+
+.custom-navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.custom-navbar .nav-link {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    padding: 15px 25px !important;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffd000;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+.page-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 30px 30px;
+    position: relative;
+}
+
+
+
+.section-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    color: white;
+    text-align: center;
+}
+
+
+.home-section .section-content {
+    transform: translateY(-50px);
+}
+
+
+.second-section {
+    justify-content: flex-start;
+}
+
+.second-section .section-content {
+    max-width: 600px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+
+.third-section {
+    justify-content: flex-end;
+}
+
+.third-section .section-content {
+    max-width: 600px;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.home-section,
+.second-section,
+.third-section,
+.fourth-section {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.home-section {
+    background-image: url("../images/home-trueno.jpg");
+}
+
+.second-section {
+    background-image: url("../images/takumi-3.jpg");
+}
+
+.third-section {
+    background-image: url("../images/toyota-rz.jpg");
+}
+
+.fourth-section {
+    background-image: url("../images/4th-bg.jpg");
+}
+
+
+.section-content h1 {
+    font-family: "Patua One", serif;
+    color: #C1121F;
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.section-content p {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.6;
+    color: white;
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+.fourth-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 5%;
+    position: relative;
+    background-color: #111;
+}
+
+.fourth-content {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.fourth-content > h1 {
+    font-family: "Patua One", serif;
+    color: #C1121F;
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+.info-card {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffd000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.info-card .card-img-top {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.info-card .card-body {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card .card-title {
+    font-family: "Archivo Black", sans-serif;
+    color: #C1121F;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.info-card .card-text {
+    font-family: "Inter Tight", sans-serif;
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-button {
+    align-self: center;
+    margin-top: auto;
+    padding: 10px 20px;
+    font-family: "Archivo Black", sans-serif;
+    color: white;
+    background-color: #ffd000;
+    border: 1px solid #ffd000;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.card-button:hover {
+    color: #ffd000;
+    background-color: transparent;
+    border-color: #ffd000;
+}
+
+
+
+@media (max-width: 991px) {
+
+    .custom-navbar {
+        height: auto;
+        min-height: 80px;
+    }
+
+    .custom-navbar .navbar-brand {
+        font-size: 20px;
+    }
+
+    .custom-navbar .navbar-collapse {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .custom-navbar .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .custom-navbar .nav-link {
+        font-size: 16px;
+        padding: 12px 20px !important;
+    }
+
+
+
+    .page-section {
+        padding: 80px 20px 20px;
+    }
+
+    .home-section .section-content {
+        transform: translateY(-30px);
+    }
+
+    .second-section,
+    .third-section {
+        justify-content: center;
+    }
+
+    .second-section {
+        background-position: 15% center;
+    }
+
+    .third-section {
+        background-position: 86% center;
+    }
+
+    .second-section .section-content,
+    .third-section .section-content {
+        max-width: 90%;
+        text-align: center;
+
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    .section-content h1 {
+        font-size: 40px;
+    }
+
+    .section-content p {
+        font-size: 17px;
+    }
+
+
+    .fourth-section {
+        padding: 100px 20px 60px;
+    }
+
+    .fourth-content > h1 {
+        font-size: 40px;
+
+        margin-bottom: 35px;
+    }
+
+    .info-card {
+        height: 500px;
+    }
+
+    .info-card .card-img-top {
+        height: 200px;
+    }
+}
